@@ -115,9 +115,11 @@ target_link_libraries(yolov11_pose_track_node
   ${PROJECT_NAME}__rosidl_typesupport_cpp
 )
 
-# Install targets
+# 修改安装目标部分
 install(TARGETS yolov11_pose_track_node bytetrack_lib
-  DESTINATION lib/
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
 )
 
 # Install launch files
